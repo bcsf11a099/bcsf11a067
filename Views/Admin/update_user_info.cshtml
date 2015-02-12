@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "update_user_info";
+}
+@model project.Models.my_user
+		
+	<div class="post" id="contact">
+				<h1>Update User Info</h1>
+				<div class="contact-form">
+					<div class="cl">&nbsp;</div>
+
+					<div class="left">
+						In ordr to access this website sign in is necessary but if you do not have account you must sign up first.
+					</div>
+					<div class="form right">
+					<!--	<form action="/Home/Add_User" method="post">
+                        -->
+					<!--	
+                         using (Html.BeginForm("update_user_info_save/", "Home", FormMethod.Post))
+                            {-->
+                           
+                        
+                                <!--<label>Your Name: <span>(Required)</span></label> -->
+                        <form action="/Admin/update_user_info_save/@Model.uId" method="post">
+                          
+                             @Html.LabelFor(m=>m.name)    
+							@Html.TextBoxFor(model => model.name)
+                            <!--<label>Your password: <span>(Required)</span></label> -->                             
+                    		
+                            @Html.LabelFor(m=>m.pwd)
+						    @Html.TextBoxFor(model => model.pwd)
+
+                         @Html.LabelFor(m=>m.address)
+                      	@Html.TextBoxFor(model => model.address)
+                    						
+                            <!--<label>Your Phone: <span>(Required)</span></label>-->
+						   @Html.LabelFor(m=>m.phone)
+                           @Html.TextBoxFor(model => model.phone)  
+                                                 							
+                            <input type="submit" class="submit-form" value="Submit" />
+
+                            </form>
+
+                         	                        <!--
+                            }
+                                                         	                        -->
+                            
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>

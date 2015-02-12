@@ -1,0 +1,48 @@
+﻿@model List<project.Models.my_user>
+@{
+    ViewBag.Title = "view_allUser";
+}
+
+			<!-- Contact -->
+			<div class="post" id="contact">		
+				<div class="contact-form">
+					<div class="cl">&nbsp;</div>
+					<div class="left">
+						<h1>List of all user's</h1>
+                        <table class="table">
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>PASSWORD</th>
+                                <th>ADDRESS</th>
+                                <th>PHONE</th>
+                            </tr>
+                            @foreach(var u in Model)
+                            {
+                                <tr>
+                                <td> @Html.DisplayFor(modelItem => u.uId)</td>
+                                <td>@u.name   </td>
+                                <td>@u.pwd    </td>                                
+                                <td>@u.address</td>
+                                <td>@u.phone  </td>
+                                    </tr>
+<!--                         td>Html.ActionLink("Update", "update_user_info", new { id =u.uId })</td> 
+      <td>Html.ActionLink("Remove", "remove_user_info", new { id =u.uId })</td>  
+    -->
+                             
+
+                                
+
+                                
+                            }
+                        </table>
+
+                        
+
+
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>
+			<!-- End Contact --> 
+										

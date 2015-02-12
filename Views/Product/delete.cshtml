@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "delete";
+}
+
+@model List<project.Models.my_product>
+<h1>All products</h1>
+@{
+    ViewBag.Title = "Index";
+}
+	<!-- About & Twitter -->
+ 			<div class="two-posts">
+				<div class="cl">&nbsp;</div>
+				
+				<div class="left">
+					<div class="post" id="about">
+
+					<table class="table">
+     
+     <thead>
+          <tr> 
+              <td><h2>Image</h2></td>
+              <td><h2>Title</h2></td>
+              <td><h2>Price</h2></td>
+
+          </tr>
+
+     </thead>
+    @foreach (var x in Model)
+    {
+     <tbody>
+          <tr>
+               <td><img src="~/files/@x.url" class="img-thumbnail" style="height:150px; width:150px" alt="MyPic" /></td>
+                  <td><h2>@x.pName</h2></td>
+                  <td><h2>@x.pPrice</h2></td>
+                                            
+                  <td><a href="~/Product/DeleteProduct/@x.pId"><button type="submit" class="btn btn-primary" > Delete </button></a></td>
+                  
+          </tr>
+          
+     </tbody>
+    }
+</table>
+
+
+
+					    <div class="cl">&nbsp;</div>
+					</div>
+				</div>	
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- End About & Twitter -->
+			
+		
+
+
+
+
+
+
+

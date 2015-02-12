@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "birthday card";
+}
+@{
+    ViewBag.Title = "wedding_card";
+}
+
+<h1>Printing samples</h1>
+
+	<!-- About & Twitter -->
+ 			<div class="two-posts">
+				<div class="cl">&nbsp;</div>
+				
+				<div class="left">
+					<div class="post" id="about">
+
+					<table class="table">
+     
+    @foreach (var x in Model)
+    {
+           
+         <thead>
+          <tr> 
+              <td><h2>Image</h2></td>
+          </tr>
+
+     </thead>
+     <tbody>
+          <tr>
+               <td><img src="~/files/@x.url" class="img-thumbnail" style="height:150px; width:150px" alt="MyPic" /></td>
+               </tr>    
+           <tr>    
+         <td><h2>Title : @x.pName</h2></td>
+               </tr>
+         <tr>
+              <td><h2>Price : @x.pPrice</h2></td>
+          </tr>
+             
+              <td><a href="/Order/Save_Order/@x.pId"><button type="submit" class="btn btn-primary" > Order </button></a></td>
+                  
+          
+          
+     </tbody>
+    }
+</table>
+
+
+
+					    <div class="cl">&nbsp;</div>
+					</div>
+				</div>	
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- End About & Twitter -->
+			
+		
+
+
+
+
+
+
+

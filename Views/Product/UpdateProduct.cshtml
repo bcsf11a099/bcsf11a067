@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "UpdateProduct";
+}
+@model project.Models.my_product
+
+ 			<div class="two-posts">
+				<div class="cl">&nbsp;</div>
+				
+				<div class="left">
+					<div class="post" id="about">
+
+
+    <form action="~/Product/Save_Update/@Model.pId" method="post">
+
+<table class="table">
+     
+     <thead>
+          <tr> 
+              <td><h2>Image</h2></td>
+              <td><h2>Title</h2></td>
+              <td><h2>Price</h2></td>
+
+          </tr>
+
+     </thead>
+     <tbody>
+          <tr>
+               <td><img src="~/files/@Model.url" class="img-thumbnail" style="height:150px; width:150px" alt="MyPic" /></td>
+                 <td><input type="text" class="form-control" name="t1" value="@Model.pName" /></td>
+                        <td><input type="text" class="form-control" name="p1" value="@Model.pPrice" /></td>
+                 <td> <input type="Submit" class="btn btn-primary" value="Update" /></td>
+                  
+          </tr>
+          
+     </tbody>
+</table>
+        </form>
+
+
+					    <div class="cl">&nbsp;</div>
+					</div>
+				</div>	
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- End About & Twitter -->
+
+

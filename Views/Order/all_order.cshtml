@@ -1,0 +1,44 @@
+﻿@model List<project.Models.order_user>
+@{
+    ViewBag.Title = "all_order";
+}
+
+			<!-- Contact -->
+			<div class="post" id="contact">		
+				<div class="contact-form">
+					<div class="cl">&nbsp;</div>
+					<div class="left">
+						<h1>List of all order's</h1>
+                        <table class="table">
+                            <tr>
+                                <th>OID</th>
+                                <th>PID</th>
+                                <th>UID</th>
+                            </tr>
+                            @foreach(var o in Model)
+                            {
+                                <tr>
+                                <td>@o.oId   </td>
+                                <td>@o.PID    </td>                                
+                                <td>@o.UID</td>
+                                    </tr>
+<!--                         td>Html.ActionLink("Update", "update_user_info", new { id =u.uId })</td> 
+      <td>Html.ActionLink("Remove", "remove_user_info", new { id =u.uId })</td>  
+    -->
+                             
+
+                                
+
+                                
+                            }
+                        </table>
+
+                        
+
+
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>
+			<!-- End Contact --> 
+
